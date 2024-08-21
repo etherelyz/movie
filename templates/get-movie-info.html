@@ -1,0 +1,13 @@
+<section id="movie-info" hx-swap-oob="true">
+    <h1>{{.Title}}</h1>
+    <p>{{.Description}}</p>
+</section>
+
+<section id="similar-movies" hx-swap-oob="true">
+    <h2>Similar movies</h2>
+    <ol>
+        {{range .SimilarTitles}}
+        <li>{{.}}</li>
+        {{end}}
+    </ol>
+</section>

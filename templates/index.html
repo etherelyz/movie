@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommend Movies</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="search-container">
+            <input id="search-input" type="search" placeholder="search movie title here" 
+            hx-get="/search_suggestion/" hx-trigger="keyup changed"
+            hx-target="#search-results" name="title">
+            <div id="search-results">
+                <!-- autosuggestion here -->
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="movie-info">
+            <!-- movie info here -->
+        </section>
+        <section id="similar-movies">
+            <!-- similar movies -->
+        </section>
+    </main>
+</body>
+
+</html>

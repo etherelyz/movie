@@ -1,0 +1,7 @@
+<ul hx-get="/search_suggestion/?title=" hx-trigger="click" hx-target="#search-results">
+    {{range .}}
+    <li hx-get="/movie_info/?movie_id={{.ID}}" hx-trigger="click">
+        {{.Title}}
+    </li>
+    {{end}}
+</ul>
